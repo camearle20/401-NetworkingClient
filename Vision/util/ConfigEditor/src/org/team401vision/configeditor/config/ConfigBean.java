@@ -19,10 +19,15 @@ public class ConfigBean {
     private int upperBoundV;
     private int cannyLowerBound;
     private int cannyUpperBound;
+    private boolean debugMode;
+    private int deviceNumber;
+    private int networkImagePort;
+    private int networkDataPort;
+    private int networkHeartbeatPort;
 
     public ConfigBean(){}
 
-    public ConfigBean(boolean autoExposure, boolean autoWB, boolean autoGain, int exposure, int saturation, int contrast, int gain, int lowerBoundH, int lowerBoundS, int lowerBoundV, int upperBoundH, int upperBoundS, int upperBoundV, int cannyLowerBound, int cannyUpperBound) {
+    public ConfigBean(boolean autoExposure, boolean autoWB, boolean autoGain, int exposure, int saturation, int contrast, int gain, int lowerBoundH, int lowerBoundS, int lowerBoundV, int upperBoundH, int upperBoundS, int upperBoundV, int cannyLowerBound, int cannyUpperBound, boolean debugMode, int deviceNumber, int networkImagePort, int networkDataPort, int networkHeartbeatPort) {
         this.autoExposure = autoExposure;
         this.autoWB = autoWB;
         this.autoGain = autoGain;
@@ -38,6 +43,11 @@ public class ConfigBean {
         this.upperBoundV = upperBoundV;
         this.cannyLowerBound = cannyLowerBound;
         this.cannyUpperBound = cannyUpperBound;
+        this.debugMode = debugMode;
+        this.deviceNumber = deviceNumber;
+        this.networkImagePort = networkImagePort;
+        this.networkDataPort = networkDataPort;
+        this.networkHeartbeatPort = networkHeartbeatPort;
     }
 
     public boolean isAutoExposure() {
@@ -158,5 +168,45 @@ public class ConfigBean {
 
     public void setCannyUpperBound(int cannyUpperBound) {
         this.cannyUpperBound = cannyUpperBound;
+    }
+
+    public boolean isDebugMode() {
+        return debugMode;
+    }
+
+    public void setDebugMode(boolean debugMode) {
+        this.debugMode = debugMode;
+    }
+
+    public int getDeviceNumber() {
+        return deviceNumber;
+    }
+
+    public void setDeviceNumber(int deviceNumber) {
+        this.deviceNumber = deviceNumber;
+    }
+
+    public int getNetworkImagePort() {
+        return networkImagePort;
+    }
+
+    public void setNetworkImagePort(int networkImagePort) {
+        this.networkImagePort = networkImagePort;
+    }
+
+    public int getNetworkDataPort() {
+        return networkDataPort;
+    }
+
+    public void setNetworkDataPort(int networkDataPort) {
+        this.networkDataPort = networkDataPort;
+    }
+
+    public int getNetworkHeartbeatPort() {
+        return networkHeartbeatPort;
+    }
+
+    public void setNetworkHeartbeatPort(int networkHeartbeatPort) {
+        this.networkHeartbeatPort = networkHeartbeatPort;
     }
 }
